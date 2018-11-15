@@ -99,7 +99,7 @@ def piskvorky1d():
             break
 
         #tah pocitace
-        pole = tah_pocitace(pole, symbol_pocitace, symbol_hrace, strategie)#vlozi symbol na vybranou pozici
+        pole = tah_pocitace(pole, symbol_pocitace, strategie)#vlozi symbol na vybranou pozici
         pocet_kol = pocet_kol + 1
         print("Tah pocitace: ")
         print(pocet_kol,".kolo: ", pole)#vypise herni pole s vylozenymi symboly

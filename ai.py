@@ -1,12 +1,18 @@
 from random import randrange
 from util import tah
 
-def tah_pocitace(pole, symbol_pocitace, symbol_hrace, strategie):
+def tah_pocitace(pole, symbol_pocitace, strategie):
     #vybere nahodne strategii pocitace na zacatku kazde hry, bud brani nebo utoci
+    symbol_hrace = None
     if strategie == 0:
         return strategie_utok(pole, symbol_pocitace)
     if strategie == 1:
-        return strategie_obrana(pole, symbol_pocitace, symbol_hrace)
+        if symbol_pocitace == "x":
+            symbol_hrace = "o"
+            return strategie_obrana(pole, symbol_pocitace, symbol_hrace)
+        if symbol_pocitace =="o":
+            symbol_hrace = "x"
+            return strategie_obrana(pole, symbol_pocitace, symbol_hrace)
 
 def pozice_pocitace(pole,symbol_pocitace):
     #funkce pro nahodne vlozeni symbolu pocitace na nahodnou pozici

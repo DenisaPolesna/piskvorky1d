@@ -36,13 +36,13 @@ def test_vyhodnot_hru_pokracuje():
 
 #testy na funkci tah_pocitace
 def test_tah_pocitace_obrana():
-    assert tah_pocitace("x--","o","x", 1) == "xo-"
+    assert tah_pocitace("x--","o", 1) == "xo-"
 
 def test_tah_pocitace_velke_pole():
-    assert tah_pocitace("x-----------------------------", "o","x",1) == "xo----------------------------"
+    assert tah_pocitace("x-----------------------------", "o",1) == "xo----------------------------"
 
 def test_tah_pocitace_utok():
-    assert tah_pocitace("x---","o","x",0) == "x-o-"
+    assert tah_pocitace("x---","o",0) == "x-o-"
 
 
 #testy na funkci strategie_utok
